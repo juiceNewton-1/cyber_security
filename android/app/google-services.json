@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "88597656417",
+    "project_id": "pp2-vlapp",
+    "storage_bucket": "pp2-vlapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88597656417:android:cdc0c6b0b7371438394b20",
+        "android_client_info": {
+          "package_name": "com.example.cyber_security"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxa7vgPorwTBh9mL6wWS_7RMEqzNjMtiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88597656417:android:8a00905472fe5bda394b20",
+        "android_client_info": {
+          "package_name": "com.example.pp_2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxa7vgPorwTBh9mL6wWS_7RMEqzNjMtiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
