@@ -81,7 +81,7 @@ class _CyberSecurityState extends State<CyberSecurity> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "CyberSecurity",
+      title: "Storage Pin-up-card Information",
       theme: LigthTheme.get,
       darkTheme: DarkTheme.get,
       themeMode: _themeMode,
