@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'dart:io';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:cyber_security/routes/route_names.dart';
@@ -7,7 +8,6 @@ import 'package:cyber_security/services/database/database_keys.dart';
 import 'package:cyber_security/services/database/database_service.dart';
 import 'package:cyber_security/services/remote_config_service.dart';
 import 'package:cyber_security/widgets/components/app_gradient_button.dart';
-import 'package:cyber_security/widgets/components/splash_loading.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 // #docregion platform_imports
 // Import for Android features.
@@ -142,7 +142,9 @@ class _PrivacyViewState extends State<PrivacyView> {
     return Scaffold(
       backgroundColor: agreeButton ? Colors.white : Colors.black,
       body: isLoading
-          ? const SplashLoading()
+          ? const Center(
+              child: CupertinoActivityIndicator(),
+            )
           : SafeArea(
               child: Stack(
                 children: [

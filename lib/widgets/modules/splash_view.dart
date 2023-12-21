@@ -3,12 +3,12 @@ import 'dart:developer';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get_it/get_it.dart';
 import 'package:cyber_security/helpers/dialog_helper.dart';
 import 'package:cyber_security/routes/route_names.dart';
 import 'package:cyber_security/services/database/database_keys.dart';
 import 'package:cyber_security/services/database/database_service.dart';
-import 'package:cyber_security/widgets/components/splash_loading.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -20,7 +20,7 @@ class SplashView extends StatefulWidget {
 class _SplashViewState extends State<SplashView> {
   final _databaseService = GetIt.instance<DatabaseService>();
   final _connectivity = Connectivity();
-  
+
   @override
   void initState() {
     Timer(Duration(milliseconds: 1500), _init);
@@ -55,6 +55,7 @@ class _SplashViewState extends State<SplashView> {
   }
 
   void _navigate() {
+    FlutterNativeSplash.remove();
     final acceptedPrivacy =
         _databaseService.get(DatabaseKeys.acceptedPrivacy) ?? false;
     if (!acceptedPrivacy) {
@@ -80,9 +81,6 @@ class _SplashViewState extends State<SplashView> {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async => false,
-      child: SplashLoading(),
-    );
+    return Scaffold();
   }
 }
