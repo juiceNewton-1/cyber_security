@@ -109,11 +109,6 @@ class _AppDrawerState extends State<AppDrawer> {
             ),
             SizedBox(height: 14),
             _DrawerTile(
-              label: 'Share with friends',
-              onPressed: () {},
-            ),
-            SizedBox(height: 14),
-            _DrawerTile(
               label: 'Contact Developers',
               onPressed: () =>
                   Navigator.of(context).pushNamed(RouteNames.contactDevelopers),
