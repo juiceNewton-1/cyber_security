@@ -10,5 +10,6 @@ class RouteNames {
   static const addCard = '/addCard';
   static const cardSort = '/cardSort';
   static const privacy = '/privacy';
-  static const codePassword = '/codePassword';
+  static const appPasswordChange = '/appPasswordChange';
+  static const passwordCheckView = '/passwordCheckView';
 }

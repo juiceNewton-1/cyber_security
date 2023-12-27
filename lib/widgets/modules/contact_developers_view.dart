@@ -36,7 +36,7 @@ class _ContactDelevopersViewState extends State<ContactDelevopersView> {
         errorCallback: () => showDialog(
           context: context,
           builder: (context) => CupertinoAlertDialog(
-            content: Text(
+            title: Text(
               'Some error has occured. Please\ntry again.',
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.displayMedium,

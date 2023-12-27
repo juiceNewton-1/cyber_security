@@ -1,7 +1,8 @@
+import 'package:cyber_security/widgets/modules/app_password_change_view.dart';
+import 'package:cyber_security/widgets/modules/password_check_view.dart';
 import 'package:flutter/material.dart';
 import 'package:cyber_security/routes/route_names.dart';
 import 'package:cyber_security/widgets/modules/agreement_view.dart';
-import 'package:cyber_security/widgets/modules/code_password_view.dart';
 import 'package:cyber_security/widgets/modules/contact_developers_view.dart';
 import 'package:cyber_security/widgets/modules/home/articles/views/article_view.dart';
 import 'package:cyber_security/widgets/modules/home/cards/views/add_card_view.dart';
@@ -30,6 +31,8 @@ class AppRoutes {
         RouteNames.addCard: (context) => AddCardView.create(context),
         RouteNames.cardSort: (context) => CardSortView.create(context),
         RouteNames.privacy: (context) => const PrivacyView(),
-        RouteNames.codePassword: (context) => const CodePasswordView(),
+        RouteNames.appPasswordChange: (context) => const AppPasswordChangeView(), 
+        RouteNames.passwordCheckView: (context) => const PasswordCheckView(), 
+        
       };
 }

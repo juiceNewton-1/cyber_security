@@ -64,11 +64,12 @@ class _SplashViewState extends State<SplashView> {
       final seenOnboarding =
           _databaseService.get(DatabaseKeys.seenOnboarding) ?? false;
       final userPassword =
-          (_databaseService.get(DatabaseKeys.password) ?? '') as String;
+          _databaseService.get(DatabaseKeys.password)  as String?;
 
       if (seenOnboarding) {
-        if (userPassword.isNotEmpty) {
-          Navigator.of(context).pushReplacementNamed(RouteNames.home);
+        if (userPassword != null) {
+          Navigator.of(context)
+              .pushReplacementNamed(RouteNames.passwordCheckView);
         } else {
           Navigator.of(context)
               .pushReplacementNamed(RouteNames.passwordCreation);

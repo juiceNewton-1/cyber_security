@@ -26,7 +26,7 @@ class _PasswordCreationViewState extends State<PasswordCreationView> {
   }
 
   void _onPasswordChange(String password) {
-    if (password.isNotEmpty) {
+    if (password.isNotEmpty && password.length >= 5) {
       if (_isButtonEnabled) return;
       setState(() => _isButtonEnabled = true);
     } else {
@@ -51,7 +51,7 @@ class _PasswordCreationViewState extends State<PasswordCreationView> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'To enter the application,\nplease create a password\nor set up a face ID',
+                'To enter the application,\nplease create a password',
                 style: Theme.of(context).textTheme.titleMedium!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground),
                 textAlign: TextAlign.center,

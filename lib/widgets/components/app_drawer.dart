@@ -97,7 +97,7 @@ class _AppDrawerState extends State<AppDrawer> {
             _DrawerTile(
               label: 'Change code password',
               onPressed: () =>
-                  Navigator.of(context).pushNamed(RouteNames.codePassword),
+                  Navigator.of(context).pushNamed(RouteNames.appPasswordChange),
             ),
             SizedBox(height: 14),
             _DrawerTile(
